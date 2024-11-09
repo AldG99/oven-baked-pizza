@@ -1,0 +1,97 @@
+.container {
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+}
+
+.imgContainer {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.price {
+  color: #d1411e;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid #d1411e;
+}
+
+.sizes {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sizeButton {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #d1411e;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sizeButton:hover {
+  background-color: #d1411e;
+  color: white;
+}
+
+.ingredients {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.quantity {
+  width: 50px;
+  height: 40px; /* Ajusta la altura aquí */
+  font-size: 16px; /* Ajusta el tamaño de fuente si es necesario */
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.button {
+  height: 40px; /* Asegúrate de que la altura coincida con .quantity */
+  margin-left: 10px;
+  background-color: #d1411e;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 15px; /* Agrega un poco de espacio interno */
+  font-size: 16px;
+  box-sizing: border-box;
+}

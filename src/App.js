@@ -5,6 +5,7 @@ import Layout from './components/layout';
 import About from './components/about';
 import Featured from './components/featured';
 import PizzaList from './components/pizzaList';
+import Product from './components/product/[id]';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/product/:id" element={<Product />} />
         </Routes>
       </Layout>
     </Router>
