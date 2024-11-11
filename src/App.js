@@ -6,6 +6,7 @@ import About from './components/about';
 import Featured from './components/featured';
 import PizzaList from './components/pizzaList';
 import Product from './components/product/[id]';
+import Cart from './components/cart/cart';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Layout>
     </Router>
