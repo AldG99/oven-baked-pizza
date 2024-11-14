@@ -29,6 +29,8 @@ const Navbar = () => {
             alt=""
             width="160px"
             height="69px"
+            onContextMenu={e => e.preventDefault()}
+            style={{ userSelect: 'none', pointerEvents: 'none' }}
           />
           <li className={styles.listItem}>Eventos</li>
           <li className={styles.listItem}>Blog</li>

@@ -7,7 +7,9 @@ const Footer = () => {
         <img
           className={styles.pizza}
           src={require('../images/bg.png')}
-          alt="Pizza"
+          alt=""
+          onContextMenu={e => e.preventDefault()}
+          style={{ userSelect: 'none', pointerEvents: 'none' }}
         />
       </div>
       <div className={styles.item}>
