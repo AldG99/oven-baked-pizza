@@ -2,7 +2,7 @@ import React from 'react';
 import PizzaCard from './pizzaCard';
 import styles from '../styles/pizzaList.module.css';
 
-const PizzaList = () => {
+const PizzaList = ({ pizzaList }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>LA MEJOR PIZZA DE LA CIUDAD</h1>
@@ -18,14 +18,9 @@ const PizzaList = () => {
         amor por la cocina pueden ofrecer!
       </p>
       <div className={styles.wrapper}>
-        <PizzaCard />
-        <PizzaCard />
-        <PizzaCard />
-        <PizzaCard />
-        <PizzaCard />
-        <PizzaCard />
-        <PizzaCard />
-        <PizzaCard />
+        {pizzaList.map(pizza => (
+          <PizzaCard key={pizza.id} pizza={pizza} />
+        ))}
       </div>
     </div>
   );
