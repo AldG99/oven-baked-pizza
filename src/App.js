@@ -9,6 +9,8 @@ import PizzaList from './components/pizzaList';
 import Product from './components/product/[id]';
 import Cart from './components/cart/cart';
 import Order from './components/orders/[id]';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 
 export default function App() {
   const [pizzaList, setPizzaList] = useState([]);
@@ -27,23 +29,25 @@ export default function App() {
 
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Featured />
-                <PizzaList pizzaList={pizzaList} />{' '}
-              </>
-            }
-          />
-          <Route path="/about" element={<About />} />
-          <Route path="/product/:id" element={<Product />} />
-          <Route path="/orders/:id" element={<Order />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </Layout>
+      <Provider store={store}>
+        <Layout>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Featured />
+                  <PizzaList pizzaList={pizzaList} />{' '}
+                </>
+              }
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/product/:id" element={<Product />} />
+            <Route path="/orders/:id" element={<Order />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Layout>
+      </Provider>
     </Router>
   );
 }
