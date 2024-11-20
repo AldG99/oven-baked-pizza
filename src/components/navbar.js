@@ -40,8 +40,8 @@ const Navbar = () => {
           <li className={styles.listItem}>Contacto</li>
         </ul>
       </div>
-      <Link href="/cart" passHref>
-        <div className={styles.item}>
+      <div className={styles.item}>
+        <Link href="/cart" passHref>
           <div className={styles.cart}>
             <img
               src={require('../images/cart.png')}
@@ -51,8 +51,8 @@ const Navbar = () => {
             />
             <div className={styles.counter}>{quantity}</div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };

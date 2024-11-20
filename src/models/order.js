@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { Timestamp } from 'mongodb';
 
 const OrderSchema = new mongoose.Schema(
   {
