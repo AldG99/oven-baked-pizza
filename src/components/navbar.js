@@ -24,7 +24,9 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Inicio</li>
+          <Link to="/" className={styles.listItem}>
+            Inicio
+          </Link>
           <li className={styles.listItem}>Productos</li>
           <li className={styles.listItem}>Menú</li>
           <img
@@ -41,8 +43,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className={styles.item}>
-        <Link href="/cart" passHref>
-          <div className={styles.cart}>
+        <Link to="/cart" className={styles.cart}>
+          <div>
             <img
               src={require('../images/cart.png')}
               alt=""
