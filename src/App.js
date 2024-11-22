@@ -10,6 +10,7 @@ import Product from './components/product/[id]';
 import Cart from './components/cart/cart';
 import Order from './components/orders/[id]';
 import store from './redux/store';
+import Admin from './components/admin/index';
 import { Provider } from 'react-redux';
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/product/:id" element={<Product />} />
             <Route path="/orders/:id" element={<Order />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </Layout>
       </Provider>
