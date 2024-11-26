@@ -129,27 +129,28 @@ const Index = ({ orders = [], products = [] }) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  try {
-    const productRes = await axios.get('http://localhost:3000/api/products');
-    const orderRes = await axios.get('http://localhost:3000/api/orders');
+export const getServerSideProps = async ctx => {
+  const myCookie = ctx.req?.cookies || '';
 
+  // Corregido TOKEN en mayúsculas
+  if (myCookie.token !== process.env.TOKEN) {
     return {
-      props: {
-        orders: orderRes.data || [],
-        products: productRes.data || [],
-      },
-    };
-  } catch (error) {
-    console.error('Error al obtener datos:', error.message);
-
-    return {
-      props: {
-        orders: [],
-        products: [],
+      redirect: {
+        destination: '/admin/login',
+        permanent: false,
       },
     };
   }
+
+  const productRes = await axios.get('http://localhost:3000/api/products');
+  const orderRes = await axios.get('http://localhost:3000/api/orders');
+
+  return {
+    props: {
+      orders: orderRes.data || [],
+      products: productRes.data || [],
+    },
+  };
 };
 
 export default Index;
