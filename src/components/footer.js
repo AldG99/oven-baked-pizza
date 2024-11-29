@@ -21,12 +21,6 @@ const Footer = () => {
         <div className={styles.card}>
           <h1 className={styles.title}>ENCUENTRA NUESTROS RESTAURANTES</h1>
           <p className={styles.text}>
-            Calle Falsa 123
-            <br /> Colonia Centro
-            <br /> Ciudad de México, 01000
-            <br /> Tel: (55) 1234-5678
-          </p>
-          <p className={styles.text}>
             Av. Reforma 456
             <br /> Colonia Juárez
             <br /> Ciudad de México, 06600
